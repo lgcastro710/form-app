@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+.content-principal{
+  background: darkgrey;
+  padding: 30px;
+  height: 805px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content-form{
+  height: 300px;
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.makeStyles-root-1{
+  background-color: darkgrey !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.MuiTab-root{
+  border-right: 1px solid #282c34 !important;
+}
+.MuiAppBar-colorPrimary{
+  background: #ffffff !important;
+}
+.MuiTab-textColorInherit{
+  color: #282c34 !important;
+  font-weight: bold !important;
+}
+.PrivateTabIndicator-colorSecondary-4 {
+  background-color: #282c34 !important;
+}
+.MuiTabs-flexContainer{
+  place-content: space-between !important;
+}
+@media (min-width: 600px){
+.MuiTab-root {
+  min-width: 177px !important;
+}
+}
+.contendor{
+  width: 100%;
+}
+form{
   display: flex;
   flex-direction: column;
+  width: 80%;
+}
+
+.content-inputs label  input{
+width: 70% !important;
+}
+.content-inputs label  select{
+  width: 71% !important;
+}
+.group-checkbox{
+  display: flex;
+  flex-direction: row;
+}
+.content-inputs label{
+  margin: 20px 30px;
+  display: flex;
+  place-content: space-between;
+}
+.checkbox-cargas{
+  margin: 0px 30px;
+}
+.checkbox-cargas input{
+  margin-left: 110px;
+}
+.group-checkbox{
+  margin: 20px 30px;
+}
+.group-checkbox input{
+  margin-left: 40px;
+}
+.checkbox-spacing{
+  margin-left: 140px !important;
+}
+.form-center{
+  justify-content: center;
+  display: flex;
+}
+.btns-form{
+  display: flex;
+  flex-direction: row;
+  place-content: space-between;
+  margin-top: 60px;
+}
+.btns-form button{
+  height: 40px;
+  width: 100px;
+  color: black;
+  font-weight: bold;
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+.title-form{
+  display: flex;
+  flex-direction: row;
+  place-content: space-between;
+}
+.btn-add{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.circle-btn{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #282c34;
+  color: darkgray;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  cursor: pointer;
 }
