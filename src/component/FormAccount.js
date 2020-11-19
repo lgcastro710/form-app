@@ -1,6 +1,6 @@
 import { Form, Text,Scope } from 'informed';
 
-export const Form2= () => {
+export const FormAccount= () => {
         return (
             <div className="contendor">
                 <div className="title-form">

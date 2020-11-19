@@ -5,9 +5,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import {Form1} from "./Form1";
-import {Form2} from "./Form2";
 import { useState } from 'react';
+import { FormBasic } from './FormBasic';
+import { FormAccount } from './FormAccount';
+import { FormSetUp } from './FormSetUp';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -72,14 +73,14 @@ export default function SimpleTabs() {
             </AppBar>
             <TabPanel value={value} index={0}>
                <div className="content-form">
-                   <Form1></Form1>
+                   <FormBasic></FormBasic>
                </div>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <Form2></Form2>
+                <FormAccount></FormAccount>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                Item Three
+                <FormSetUp></FormSetUp>
             </TabPanel>
             <TabPanel value={value} index={3}>
                 aja que

@@ -1,6 +1,6 @@
 import { Form, Text, Checkbox, Select, Option, Scope } from 'informed';
 
-export const Form1 = () => {
+export const FormBasic = () => {
      
         return (
             <div className="contendor">
