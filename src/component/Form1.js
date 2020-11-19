@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
 import { Form, Text, Checkbox, Select, Option, Scope } from 'informed';
 
-class Form1 extends Component {
-    render() {
+export const Form1 = () => {
+     
         return (
             <div className="contendor">
                 <h1>BASIC INFO.</h1>
@@ -50,8 +49,6 @@ class Form1 extends Component {
             </div>
         );
     }
-}
 
 
 
-export default Form1;

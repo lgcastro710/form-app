@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -8,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Form1 from "./Form1";
 import Form2 from "./Form2";
+import { useState } from 'react';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleTabs() {
     const classes = useStyles();
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] =useState(0);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
