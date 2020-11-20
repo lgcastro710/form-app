@@ -1,5 +1,4 @@
-import { Select } from '@material-ui/core';
-import { Form, Text,Scope, Option } from 'informed';
+import { Form, Text,Scope} from 'informed';
 
 export const FormSetUp= () => {
         return (
@@ -19,7 +18,6 @@ export const FormSetUp= () => {
                                 <label>City*<Text field="" placeholder="text"/></label>
                                 <label>State*<Text field="" placeholder="text"/></label>
                                 <label>State*<Text field="" placeholder="text"/></label>
-      
                                 <label>Zip*<Text field="" placeholder="text"/></label>
                                 <label>Fax*<Text field="" placeholder="text"/></label>
                                 <label>MC*<Text field="" placeholder="text"/></label>
