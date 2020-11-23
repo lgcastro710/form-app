@@ -1,14 +1,12 @@
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import { useState } from 'react';
 import { FormBasic } from './FormBasic';
 import { FormAccount } from './FormAccount';
 import { FormSetUp } from './FormSetUp';
+import { FromInsurance } from './FormInsurance';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -36,12 +34,7 @@ TabPanel.propTypes = {
     value: PropTypes.any.isRequired,
 };
 
-function a11yProps(index) {
-    return {
-        id: `simple-tab-${index}`,
-        'aria-controls': `simple-tabpanel-${index}`,
-    };
-}
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -50,27 +43,12 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SimpleTabs() {
+export default function SimpleTabs({value,setvalue}) {
     const classes = useStyles();
-    const [value, setValue] =useState(0);
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
-
+   
     return (
         <div className={classes.root}>
-            <AppBar position="static">
-                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-                    <Tab label="Basic Info" {...a11yProps(0)} />
-                    <Tab label="Account Numbers" {...a11yProps(1)} />
-                    <Tab label="Set Up Info" {...a11yProps(2)} />
-                    <Tab label="Insurance Info" {...a11yProps(3)} />
-                    <Tab label="Web Access" {...a11yProps(4)} />
-                    <Tab label="Docs control" {...a11yProps(5)} />
-                    <Tab label="Payment Info" {...a11yProps(6)} />
-                </Tabs>
-            </AppBar>
+         
             <TabPanel value={value} index={0}>
                <div className="content-form">
                    <FormBasic></FormBasic>
@@ -83,7 +61,7 @@ export default function SimpleTabs() {
                 <FormSetUp></FormSetUp>
             </TabPanel>
             <TabPanel value={value} index={3}>
-                aja que
+                <FromInsurance></FromInsurance>
             </TabPanel>
         </div>
     );
