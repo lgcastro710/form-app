@@ -5,17 +5,17 @@ import {
   Typography,
   IconButton,
   Drawer,
- 
+  MenuItem,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import {  makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
+import { AccountCircle } from "@material-ui/icons";
 
-// import Menu from "./Menu";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    color:"black"
+    color: "black",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -27,9 +27,6 @@ const useStyles = makeStyles((theme) => ({
       display: "block",
     },
   },
- 
-  
- 
 }));
 
 export const Navbar = () => {
@@ -51,18 +48,18 @@ export const Navbar = () => {
             onClick={handledrawer}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton>  
+          
+      <MenuItem >
+       
+          <AccountCircle />
           <Typography className={classes.title} variant="h6" noWrap>
             DISPATCH CARRIER
-          </Typography>
-
-        </Toolbar>
-      </AppBar>
-
-      <Drawer anchor="left" open={open} onClose={() => setopen(false)}>
-    
-      </Drawer>
-      
+            </Typography>
+      </MenuItem>
+          </Toolbar>
+        </AppBar>
+      <Drawer anchor="left" open={open} onClose={() => setopen(false)}></Drawer>
     </div>
   );
 };

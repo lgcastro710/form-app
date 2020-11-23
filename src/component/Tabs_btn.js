@@ -40,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         backgroundColor: theme.palette.background.paper,
+        padding:0
     },
 }));
 
@@ -49,10 +50,9 @@ export default function SimpleTabs({value,setvalue}) {
     return (
         <div className={classes.root}>
          
-            <TabPanel value={value} index={0}>
                <div className="content-form">
+            <TabPanel value={value} index={0}>
                    <FormBasic></FormBasic>
-               </div>
             </TabPanel>
             <TabPanel value={value} index={1}>
                 <FormAccount></FormAccount>
@@ -63,6 +63,7 @@ export default function SimpleTabs({value,setvalue}) {
             <TabPanel value={value} index={3}>
                 <FromInsurance></FromInsurance>
             </TabPanel>
+               </div>
         </div>
     );
 }
