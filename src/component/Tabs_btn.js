@@ -7,6 +7,8 @@ import { FormBasic } from './FormBasic';
 import { FormAccount } from './FormAccount';
 import { FormSetUp } from './FormSetUp';
 import { FromInsurance } from './FormInsurance';
+import { FormSetUp_2 } from './FormSetUp_2';
+import { TableWebAccess } from './TableWebAccess';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -60,8 +62,12 @@ export default function SimpleTabs({value,setvalue}) {
             <TabPanel value={value} index={2}>
                 <FormSetUp></FormSetUp>
             </TabPanel>
+           
             <TabPanel value={value} index={3}>
                 <FromInsurance></FromInsurance>
+            </TabPanel>
+            <TabPanel value={value} index={4}>
+                <TableWebAccess></TableWebAccess>
             </TabPanel>
                </div>
         </div>

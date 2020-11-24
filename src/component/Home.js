@@ -28,7 +28,6 @@ export const Home = () => {
 <ThemeProvider theme={theme}>
       <CssBaseline />
           <Navbar />
-            <div className="content-principal">
             <AppBar position="static">
                 <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
                     <Tab label="Basic Info" {...a11yProps(0)} />
@@ -41,7 +40,6 @@ export const Home = () => {
                 </Tabs>
             </AppBar>
                 <TabsBtn value={value} setValue={setValue}></TabsBtn>
-            </div>
           </ThemeProvider>
             </>
         );
